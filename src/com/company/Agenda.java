@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
@@ -24,9 +25,9 @@ public class Agenda {
     }
 
     public void loadContacts() {
-        Persona p1 = new Persona("Juan", "999999999", "Calle recta", "correoReal@jemeil.com");
-        Persona p2 = new Persona("Pepe", "111111111", "Calle curva", "correoFalso@jemeil.com");
-        Persona p3 = new Persona("Selim selarom", "454545454", "Calle inclinada", "correo100%Real@jemeil.com");
+        Persona p1 = new Persona("Mario", "999999999", "Calle recta", "correoReal@jemeil.com");
+        Persona p2 = new Persona("Manolo", "111111111", "Calle curva", "correoFalso@jemeil.com");
+        Persona p3 = new Persona("Antoinio", "454545454", "Calle inclinada", "correo100%Real@jemeil.com");
         agendaTelf.add(p1);
         agendaTelf.add(p2);
         agendaTelf.add(p3);
@@ -36,6 +37,9 @@ public class Agenda {
         agendaTelf.removeAll(agendaTelf);
     }
 
+    public void ordenarAlfabeticamente(){
+        agendaTelf.sort(Comparator.comparing(persona -> persona.getName()));
+    }
 
 
     private void showContacts(List<Persona> contactos) {
