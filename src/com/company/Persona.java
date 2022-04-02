@@ -2,18 +2,18 @@ package com.company;
 
 public class Persona {
     private String name;
-    private int phoneNumber;
+    private String phoneNumber;
     private String address;
     private String email;
 
-    public Persona(String name, int phoneNumber, String address, String email) {
+    public Persona(String name, String phoneNumber, String address, String email) {
         this.name=name;
         this.phoneNumber=phoneNumber;
         this.address = address;
         this.email=email;
     }
 
-    public Persona(String name, int phoneNumber){
+    public Persona(String name, String phoneNumber){
         this(name,phoneNumber,null,null);
     }
 
@@ -25,11 +25,11 @@ public class Persona {
         this.name = name;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
